@@ -61,7 +61,7 @@ app.include_router(farms_router, prefix=settings.API_V1_STR, tags=["Farm Monitor
 app.include_router(dashboard_router, prefix=settings.API_V1_STR, tags=["Dashboard Analytics"])
 app.include_router(feedback_router, prefix=settings.API_V1_STR, tags=["Feedback"])
 
-@app.get("/")
+@app.api_route("/", methods=["GET", "HEAD"])
 def root():
     return {
         "project": "PlantCare AI API",
