@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: plantcare-api
+    runtime: python
+    buildCommand: pip install -r backend/requirements.txt greenlet
+    startCommand: cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: MODEL_PATH
+        value: ../ml/models/plantcare_mobilenetv3.pth
+      - key: CONFIDENCE_THRESHOLD
+        value: "0.40"
+      - key: BLUR_THRESHOLD
+        value: "40.0"

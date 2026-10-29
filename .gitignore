@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+backend/venv/
+backend/plantcare.db
+backend/uploads/*.jpg
+backend/uploads/*.png
+backend/uploads/*.jpeg
+backend/uploads/reports/*.pdf
+!backend/uploads/.gitkeep
+
+# PyTorch weights
+*.pth
+*.pt
+!ml/models/plantcare_mobilenetv3.pth
+!ml/models/.gitkeep
+
+# Node
+node_modules/
+frontend/dist/
+frontend/node_modules/
+.npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.vercel
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
